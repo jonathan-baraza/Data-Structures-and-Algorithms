@@ -2,13 +2,31 @@ def linear_search(list,target):
     """
     Returns the index position of the target it found, else returns None
     """
+    #answer one
     # print(list.index(target))
-    x=0;
-    while(x<len(list)):
-        if(list[x]==target):
-            break;
-        x=x+1
-    print(x)
+
+    #answer two
+    # x=0;
+    # while(x<len(list)):
+    #     if(list[x]==target):
+    #         break;
+    #     x=x+1
+    # print(x)
+
+    #answer three
+    for i in range(0,len(list)):
+        if list[i]==target:
+            return i
+    return None
 
 
-linear_search([2,3,4,5],2)
+def verify(index):
+    if index is not None:
+         print(f"The value was found at index {index}")
+    else:
+        print("The value does not exist in the list provided")
+
+
+numbers=[1,2,3,4,5,6,7,8,9,10]
+
+verify(linear_search(numbers,7))
