@@ -27,4 +27,6 @@ def verify(index):
         print("The value does not exist in the list provided")
 
 
-verify(linear_search([2,3,4,5],2))
+numbers=[1,2,3,4,5,6,7,8,9,10]
+
+verify(linear_search(numbers,7))
