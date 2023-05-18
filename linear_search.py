@@ -19,4 +19,12 @@ def linear_search(list,target):
             return i
     return None
 
-print(linear_search([2,3,4,5],3))
+
+def verify(index):
+    if index is not None:
+         print(f"The value was found at index {index}")
+    else:
+        print("The value does not exist in the list provided")
+
+
+verify(linear_search([2,3,4,5],2))
