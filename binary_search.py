@@ -1,19 +1,32 @@
 import math
 def binary_search(list,target):
-    myList=list
-    myList.sort()
-    midValue=None;
-    newList=myList
+    #my implementation
+    # myList=list
+    # myList.sort()
+    # midValue=None;
+    # newList=myList
+    #
+    # while len(newList)>0:
+    #     midValue=newList[math.floor(len(newList) / 2)]
+    #     if midValue==target:
+    #         return myList.index(midValue)
+    #     else:
+    #         if midValue>target:
+    #             newList = newList[0:newList.index(midValue)]
+    #         else:
+    #             newList= newList[newList.index(midValue)+1:]
+    # return None
+    first=0
+    last= len(list)-1
 
-    while len(newList)>0:
-        midValue=newList[math.floor(len(newList) / 2)]
-        if midValue==target:
-            return myList.index(midValue)
+    while first<=last:
+        midpoint=(first+last)//2
+        if list[midpoint]==target:
+            return midpoint
+        elif list[midpoint<target]:
+            first=midpoint+1
         else:
-            if midValue>target:
-                newList = newList[0:newList.index(midValue)]
-            else:
-                newList= newList[newList.index(midValue)+1:]
+            last=midpoint-1
     return None
 
 
