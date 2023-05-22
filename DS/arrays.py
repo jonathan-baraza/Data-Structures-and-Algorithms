@@ -24,7 +24,15 @@ new_list.append(34)
 
 
 #add one list to another
-
 new_list.extend(listTwo)
 
+
+#delete
+new_list.pop(1) #pop function removes last element if you haven't provided the index
+new_list.remove(6) #removes the value provided not the index
+
+
+
+
+#NB: insert shifts elements to the RIGHT while delete shifts elements to the LEFT. (to create and occupy index space respectively)
 print(new_list)
