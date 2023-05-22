@@ -11,4 +11,5 @@ for x in new_list:
         print(new_list.index(x))
         break
 
+
 print(result)
