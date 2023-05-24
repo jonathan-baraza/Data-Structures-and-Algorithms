@@ -9,7 +9,12 @@ class Node:
     def __init__(self,data):
         self.data=data
 
+    def __repr__(self):
+        return "<Node data: %s>" % self.data
+
+
 
 
 N1=Node(10)
-print(type(N1))
+
+print(N1)
