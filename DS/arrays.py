@@ -35,4 +35,4 @@ new_list.remove(6) #removes the value provided not the index
 
 
 #NB: insert shifts elements to the RIGHT while delete shifts elements to the LEFT. (to create and occupy index space respectively)
-print(new_list)
+print(new_list) 
