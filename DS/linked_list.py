@@ -8,3 +8,8 @@ class Node:
 
     def __init__(self,data):
         self.data=data
+
+
+
+N1=Node(10)
+print(type(N1))
