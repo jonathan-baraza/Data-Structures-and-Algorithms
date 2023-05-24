@@ -13,6 +13,13 @@ class Node:
         return "<Node data: %s>" % self.data
 
 
+class LinkedList:
+    def __int__(self):
+        self.head=None
+
+
+
+
 
 
 N1=Node(10)
