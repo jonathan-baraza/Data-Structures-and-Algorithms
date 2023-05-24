@@ -16,5 +16,9 @@ class Node:
 
 
 N1=Node(10)
+N2=Node(20)
 
-print(N1)
+N1.next_node=N2
+
+
+print(N1.next_node)
