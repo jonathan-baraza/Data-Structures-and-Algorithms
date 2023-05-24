@@ -26,6 +26,11 @@ class LinkedList:
         return self.head==None
 
     def size(self):
+        """
+        Returns the number of nodes in the list
+        Takes O(n) i.e linear time
+        :return:
+        """
         current=self.head
         count=0
 
