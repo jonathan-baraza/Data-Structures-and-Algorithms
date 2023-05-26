@@ -55,6 +55,9 @@ class LinkedList:
 
 
     def search(self,key):
+        """
+        Returns index of the value being searched for
+        """
         found=None
         index=0
         current=self.head;
