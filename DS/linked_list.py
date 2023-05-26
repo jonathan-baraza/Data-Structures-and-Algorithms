@@ -14,11 +14,9 @@ class Node:
 
 
 class LinkedList:
-
     """
     Singly linked list
     """
-
     def __int__(self):
         self.head=None
 
