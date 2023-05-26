@@ -24,25 +24,7 @@ class LinkedList:
     # def __repr__(self):
     #     return "<Linked list with %s items>" % self.size()
 
-    def __repr__(self):
-        """
-        Returns a string representation of the list
-        Takes 0(n) time
-        """
-        nodes=[]
-        current=self.head
 
-        while current:
-            if current is self.head:
-                nodes.append("[Head: %s]" % current.data)
-            elif current.next_node is None:
-                nodes.append("[Tail: %s]" % current.data)
-            else:
-                nodes.append("[%s]" % current.data)
-
-            current=current.next_node
-
-        return "->".join(nodes)
 
     def is_empty(self):
         return self.head==None
@@ -69,6 +51,28 @@ class LinkedList:
         new_node=Node(data)
         new_node.next_node=self.head
         self.head=new_node
+
+    def __repr__(self):
+        """
+        Returns a string representation of the list
+        Takes 0(n) time
+        """
+        nodes = []
+        current = self.head
+
+        while current:
+            if current is self.head:
+                nodes.append("[Head: %s]" % current.data)
+            elif current.next_node is None:
+                nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" % current.data)
+
+            current = current.next_node
+
+        return "->".join(nodes)
+
+
 
 
 l=LinkedList()
