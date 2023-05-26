@@ -26,7 +26,7 @@ class LinkedList:
     def size(self):
         """
         Returns the number of nodes in the list
-        Takes O(n) i.e linear time
+        Takes O(n) i.e. linear time
         :return:
         """
         current=self.head
@@ -37,18 +37,14 @@ class LinkedList:
             current=current.next_node
         return count
 
+    def add(self,data):
+        new_node=Node(data);
+        new_node.next_node=self.head
+        self.head=new_node
 
 
-
-
-
-
-
-
+l=LinkedList()
 N1=Node(10)
-N2=Node(20)
+l.head=N1
 
-N1.next_node=N2
-
-
-print(N1.next_node)
+print(l.is_empty())
