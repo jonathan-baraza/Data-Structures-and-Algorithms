@@ -13,14 +13,19 @@ class Node:
         return "<Node data: %s>" % self.data
 
 
-class LinkedList:
 
+class LinkedList:
     """
     Singly linked list
     """
-
+    head=None
     def __int__(self):
         self.head=None
+
+    # def __repr__(self):
+    #     return "<Linked list with %s items>" % self.size()
+
+
 
     def is_empty(self):
         return self.head==None
@@ -28,7 +33,7 @@ class LinkedList:
     def size(self):
         """
         Returns the number of nodes in the list
-        Takes O(n) i.e linear time
+        Takes O(n) i.e. linear time
         :return:
         """
         current=self.head
@@ -39,18 +44,94 @@ class LinkedList:
             current=current.next_node
         return count
 
+    def add(self,data):
+        """
+        Adds new Node containing data at the head of the list
+        Takes O(n) time i.e. constant time
+        """
+        new_node=Node(data)
+        new_node.next_node=self.head
+        self.head=new_node
+
+
+    # def search(self,key):
+    #     """
+    #     Returns index of the value being searched for
+    #     """
+    #     found=None
+    #     index=0
+    #     current=self.head;
+    #     while current:
+    #         if current.data == key:
+    #             found=index
+    #         current=current.next_node
+    #         index+=1
+    #     return found
+    def search(self,key):
+        """
+        Search for the first node containing data that matches the key
+        Returns the node or 'None' if not found
+        Takes O(n) i.e. linear time
+        """
+        current=self.head
+        while current:
+            if current.data == key:
+                return current
+            else:
+                current=current.next_node
+        return None
+
+    def insert(self,data,index):
+        """ 
+        Inserts a new node containing data at index position
+        Insertion takes constant ltime (0)1 but finidng the node at the insertion point takes O(n time)
+        
+        Takes overall O(n) time
+        """
+        if index==0:
+          self.add(data)
+        if index>0:
+          new=Node(data)
+          position=index
+          current=self.head
+
+          while position>1:
+              # current=node.next_node
+              position-=1
+          prev_node=current
+          next_node=current.next_node
+
+          prev_node.next_node=new
+          new.next_node=next_node
+
+    def __repr__(self):
+        """
+        Returns a string representation of the list
+        Takes 0(n) time
+        """
+        nodes = []
+        current = self.head
+
+        while current:
+            if current is self.head:
+                nodes.append("[Head: %s]" % current.data)
+            elif current.next_node is None:
+                nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" % current.data)
+
+            current = current.next_node
+
+        return "->".join(nodes)
 
 
 
 
+l=LinkedList()
+l.add(1)
+l.add(2)
+l.add(3)
+l.add(4)
 
-
-
-
-N1=Node(10)
-N2=Node(20)
-
-N1.next_node=N2
-
-
-print(N1.next_node)
+# print(l.search(1))
+print(l.insert(99,3))
