@@ -25,6 +25,10 @@ class LinkedList:
     #     return "<Linked list with %s items>" % self.size()
 
     def __repr__(self):
+        """
+        Returns a string representation of the list
+        Takes 0(n) time
+        """
         nodes=[]
         current=self.head
 
