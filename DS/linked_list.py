@@ -54,19 +54,27 @@ class LinkedList:
         self.head=new_node
 
 
+    # def search(self,key):
+    #     """
+    #     Returns index of the value being searched for
+    #     """
+    #     found=None
+    #     index=0
+    #     current=self.head;
+    #     while current:
+    #         if current.data == key:
+    #             found=index
+    #         current=current.next_node
+    #         index+=1
+    #     return found
     def search(self,key):
-        """
-        Returns index of the value being searched for
-        """
-        found=None
-        index=0
-        current=self.head;
+        current=self.head
         while current:
             if current.data == key:
-                found=index
-            current=current.next_node
-            index+=1
-        return found
+                return current
+            else:
+                current=current.next_node
+            return None
     def __repr__(self):
         """
         Returns a string representation of the list
