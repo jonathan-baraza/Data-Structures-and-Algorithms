@@ -122,6 +122,8 @@ class LinkedList:
                 current=current.next_node
             current=current.next_node
 
+        return current
+
 
     def __repr__(self):
         """
