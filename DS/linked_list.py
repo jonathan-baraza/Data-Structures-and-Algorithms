@@ -13,6 +13,7 @@ class Node:
         return "<Node data: %s>" % self.data
 
 
+
 class LinkedList:
     """
     Singly linked list
@@ -52,6 +53,17 @@ class LinkedList:
         new_node.next_node=self.head
         self.head=new_node
 
+
+    def search(self,key):
+        found=None
+        index=0
+        current=self.head;
+        while current:
+            if current.data == key:
+                found=index
+            current=current.next_node
+            index+=1
+        return found
     def __repr__(self):
         """
         Returns a string representation of the list
@@ -81,4 +93,4 @@ l.add(2)
 l.add(3)
 l.add(4)
 
-print(l)
+print(l.search(3))
