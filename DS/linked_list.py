@@ -79,7 +79,7 @@ class LinkedList:
                 return current
             else:
                 current=current.next_node
-            return None
+        return None
     def __repr__(self):
         """
         Returns a string representation of the list
@@ -109,4 +109,4 @@ l.add(2)
 l.add(3)
 l.add(4)
 
-print(l.search(3))
+print(l.search(1))
