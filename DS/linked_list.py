@@ -68,6 +68,11 @@ class LinkedList:
     #         index+=1
     #     return found
     def search(self,key):
+        """
+        Search for the first node containing data that matches the key
+        Returns the node or 'None' if not found
+        Takes O(n) i.e. linear time
+        """
         current=self.head
         while current:
             if current.data == key:
