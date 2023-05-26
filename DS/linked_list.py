@@ -21,6 +21,10 @@ class LinkedList:
     def __int__(self):
         self.head=None
 
+
+    def __repr__(self):
+        return "<Linked list with %s items>" % self.size()
+
     def is_empty(self):
         return self.head==None
 
@@ -52,4 +56,4 @@ l=LinkedList()
 l.add(1)
 l.add(2)
 
-print(l.size())
+print(l)
