@@ -80,6 +80,14 @@ class LinkedList:
             else:
                 current=current.next_node
         return None
+
+    def insert(self,data,index):
+        currentIndex=0;
+        current=self.head
+        while current:
+            print(current)
+            current=current.next_node
+
     def __repr__(self):
         """
         Returns a string representation of the list
@@ -109,4 +117,5 @@ l.add(2)
 l.add(3)
 l.add(4)
 
-print(l.search(1))
+# print(l.search(1))
+print(l.insert(99,3))
