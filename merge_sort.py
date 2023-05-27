@@ -29,3 +29,6 @@ def split(list):
     right=list[mid:]
 
     return left,right
+
+def merge(left,right):
+    """"""
