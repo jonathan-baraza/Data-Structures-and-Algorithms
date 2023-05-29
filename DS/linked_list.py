@@ -130,6 +130,11 @@ class LinkedList:
         return current
 
     def node_at_index(self,index):
+        """
+        Returns the node at the given index position
+        :param index:
+        :return: node at given index
+        """
         if index==0:
             return self.head
         else:
