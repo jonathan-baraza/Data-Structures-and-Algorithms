@@ -28,3 +28,12 @@ def split (linked_list):
     :param linked_list:
     :return:
     """
+
+    if linked_list==None or linked_list.head is None:
+        #Assuming we are splitting a linked list with a single node
+        left_half=linked_list
+        right_half=None
+        return left_half,right_half
+    else:
+        size=linked_list.size()
+        midpoint=size//2
