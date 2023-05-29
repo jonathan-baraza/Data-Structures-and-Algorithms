@@ -27,6 +27,10 @@ def split(list):
     
     
     Takes overall  O(log n) time
+    But there's a caveat
+    Python's slice is not a constant time operation .
+    hence:
+    Takes overal O(K log n)
     """
 
     mid=len(list)//2
@@ -41,7 +45,6 @@ def merge(left,right):
     :return: Returns a new merged list
 
     Runs in overall O(n) time
-    O(n log n)
     """
     l=[]
     i=0
