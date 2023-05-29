@@ -11,6 +11,8 @@ def merge_sort(list):
 
      After caveat realization from split
      Takes O(Kn log n) time
+
+     space complexity of merge sort is linear
     """
 
     if len(list)<=1:
