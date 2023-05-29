@@ -42,7 +42,7 @@ def split (linked_list):
         left_half=linked_list
         right_half=LinkedList()
         """assign the head of the right list to be the node after the mid node"""
-        right_half.head(midNode.next_node)
+        right_half.head=midNode.next_node
         midNode.next_node=None
 
         return left_half,right_half
@@ -103,7 +103,17 @@ def merge(left,right):
         #move current to next nodef
         current=current.next_node
     #Discard fake head and set first merged node as head
-    head=merged.head.nex_node
+    head=merged.head.next_node
     merged.head=head
     return merged
+
+l=LinkedList()
+l.add(10)
+l.add(2)
+l.add(44)
+l.add(15)
+l.add(200)
+
+sorted_linked_list=merge_sort((l))
+print(sorted_linked_list)
 
