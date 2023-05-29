@@ -100,3 +100,10 @@ def merge(left,right):
                 #move right head to next node
                 right_head=right_head.next_node
 
+        #move current to next nodef
+        current=current.next_node
+    #Discard fake head and set first merged node as head
+    head=merged.head.nex_node
+    merged.head=head
+    return merged
+
