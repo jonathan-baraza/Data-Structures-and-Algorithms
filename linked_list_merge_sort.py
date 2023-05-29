@@ -59,4 +59,20 @@ def merge(left,right):
     merged=LinkedList()
 
     #add a fake head that is discarded later
+    merged.add(0)
+    #set current to head of linked list
+    current=merged.head
+
+    #obtain head nodes from left and right linked lists
+    left_head=left.head
+    right_head=right.head
+
+    #iterate over left and write untile we reach the tail node of either
+
+    while left_head or right_head:
+        #If the head node of head is None, we are past the tail.
+        #Add the node from right to merged linked list
+        if left_head is None:
+            current.next_node=right_head
+            right_head=right_head.next_node
 
