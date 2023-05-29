@@ -6,11 +6,20 @@ def merge_sort(list):
      Divide: Find the midpoint of the list and divide into sublists
      Conquer: Recursively sort hte sublists created in previous step
      Combine: Merge the sorted sublists created in previous step
+
+     Takes O(n log n) time (actual runtime after fixing the caveat)
+
+     After caveat realization from split
+     Takes O(Kn log n) time
+
+     space complexity of merge sort is linear
     """
 
     if len(list)<=1:
         return list
 
+    #fixing the caveat
+    #use linear for splitting
     left_half,right_half=split(list)
     left=merge_sort(left_half)
     right=merge_sort(right_half)
@@ -22,6 +31,13 @@ def split(list):
     Divide the unsorted list at midpoint into sublists
     :param list: a list
     :returns two sublists - left and right
+    
+    
+    Takes overall  O(log n) time
+    But there's a caveat
+    Python's slice is not a constant time operation .
+    hence:
+    Takes overal O(K log n)
     """
 
     mid=len(list)//2
@@ -34,6 +50,8 @@ def merge(left,right):
     """
     Merges two list (array) sorting them in the process
     :return: Returns a new merged list
+
+    Runs in overall O(n) time
     """
     l=[]
     i=0
