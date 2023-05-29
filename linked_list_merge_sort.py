@@ -44,3 +44,5 @@ def split (linked_list):
         #assign the head of the right list to be the node after the mid node
         right_half.head(midNode.next_node)
         midNode.next_node=None
+
+        return left_half,right_half
