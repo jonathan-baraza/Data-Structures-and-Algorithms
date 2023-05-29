@@ -8,6 +8,8 @@ def merge_sort(linked_list):
 
     :param linked_list:
     :return: a sorted linked list
+
+    Runs in O(kn log n)
     """
 
     if linked_list.size()==1:
@@ -27,6 +29,8 @@ def split (linked_list):
     divide the unsorted list at midpoint into sublinkedlist
     :param linked_list:
     :return:
+
+    Takes O(k log n)
     """
 
     if linked_list==None or linked_list.head is None:
@@ -52,6 +56,8 @@ def merge(left,right):
     """
     Merges two linked list, sorting by data in nodes
     :return: a new merged list
+
+    Runs in O(n) (linear time)
     """
 
     #create a new linked list that contains nodes from merging left and right
@@ -117,3 +123,4 @@ l.add(200)
 sorted_linked_list=merge_sort((l))
 print(sorted_linked_list)
 
+#Technique used is divide and conquer
