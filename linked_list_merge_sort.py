@@ -41,8 +41,22 @@ def split (linked_list):
         midNode=linked_list.node_at_index(midpoint-1)
         left_half=linked_list
         right_half=LinkedList()
-        #assign the head of the right list to be the node after the mid node
+        """assign the head of the right list to be the node after the mid node"""
         right_half.head(midNode.next_node)
         midNode.next_node=None
 
         return left_half,right_half
+
+
+def merge(left,right):
+    """
+    Merges two linked list, sorting by data in nodes
+    :return: a new merged list
+    """
+
+    #create a new linked list that contains nodes from merging left and right
+
+    merged=LinkedList()
+
+    #add a fake head that is discarded later
+
