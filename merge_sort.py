@@ -7,12 +7,17 @@ def merge_sort(list):
      Conquer: Recursively sort hte sublists created in previous step
      Combine: Merge the sorted sublists created in previous step
 
-     Takes O(n log n) time
+     Takes O(n log n) time (actual runtime after fixing the caveat)
+
+     After caveat realization from split
+     Takes O(Kn log n) time
     """
 
     if len(list)<=1:
         return list
 
+    #fixing the caveat
+    #use linear for splitting
     left_half,right_half=split(list)
     left=merge_sort(left_half)
     right=merge_sort(right_half)
