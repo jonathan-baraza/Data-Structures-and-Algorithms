@@ -22,6 +22,9 @@ def split(list):
     Divide the unsorted list at midpoint into sublists
     :param list: a list
     :returns two sublists - left and right
+    
+    
+    Takes overall  O(log n) time
     """
 
     mid=len(list)//2
@@ -34,6 +37,9 @@ def merge(left,right):
     """
     Merges two list (array) sorting them in the process
     :return: Returns a new merged list
+
+    Runs in overall O(n) time
+    O(n log n)
     """
     l=[]
     i=0
