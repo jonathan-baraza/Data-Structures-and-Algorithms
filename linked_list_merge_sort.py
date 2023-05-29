@@ -74,5 +74,6 @@ def merge(left,right):
         #Add the node from right to merged linked list
         if left_head is None:
             current.next_node=right_head
+            #call next on right to set loop condition to false
             right_head=right_head.next_node
 
