@@ -31,3 +31,12 @@ var Stack = function () {
     return this.storage[this.count - 1];
   };
 };
+
+var myStack = new Stack();
+
+myStack.push(1);
+myStack.push(2);
+
+console.log(myStack.peek);
+console.log(myStack.pop);
+console.log(myStack.peek);
