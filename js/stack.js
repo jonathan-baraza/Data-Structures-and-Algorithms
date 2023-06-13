@@ -22,8 +22,12 @@ var Stack = function () {
     return result;
   };
 
-  this.size=function(){
-    return this.count
-  }
+  this.size = function () {
+    return this.count;
+  };
 
+  //Returns the value at the end of the stack
+  this.peek = function (value) {
+    return this.storage[this.count - 1];
+  };
 };
