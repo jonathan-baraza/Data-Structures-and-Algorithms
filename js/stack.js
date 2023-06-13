@@ -27,7 +27,7 @@ var Stack = function () {
   };
 
   //Returns the value at the end of the stack
-  this.peek = function (value) {
+  this.peek = function () {
     return this.storage[this.count - 1];
   };
 };
