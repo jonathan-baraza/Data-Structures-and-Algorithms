@@ -22,8 +22,25 @@ function mySet() {
     }
     return false;
   };
+
+  this.remove = function (element) {
+    if (!this.has(element)) {
+      return false;
+    }
+    var idx = collection.indexOf(element);
+    var newCollection = [];
+    for (i = 0; i < collection.length; i++) {
+      if (i !== idx) {
+        newCollection.push(collection[i]);
+      }
+    }
+    collection = newCollection;
+    return idx;
+  };
 }
 
 var obj = new mySet();
-console.log(obj.add(1));
+console.log(obj.remove(3));
+console.log(obj.remove(4));
+console.log(obj.remove(1));
 console.log(obj.values());
