@@ -36,6 +36,9 @@ function mySet() {
     }
     collection = newCollection;
     return idx;
+
+    //remove with splice
+    // collection.splice(idx,1)
   };
 }
 
