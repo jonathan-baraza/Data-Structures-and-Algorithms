@@ -72,6 +72,17 @@ function mySet() {
     });
     return intersectionSet;
   };
+
+  this.difference = function (otherSet) {
+    var differenceSet = new mySet();
+    var firstSet = this.values();
+    firstSet.forEach(function (e) {
+      if (!otherSet.has(e)) {
+        differenceSet.add(e);
+      }
+    });
+    return differenceSet;
+  };
 }
 
 var obj = new mySet();
