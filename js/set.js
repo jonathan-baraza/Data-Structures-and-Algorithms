@@ -46,9 +46,9 @@ function mySet() {
   };
 
   this.union = function (otherSet) {
-    var unionSet = new Set();
+    var unionSet = new mySet();
     var firstSet = this.values();
-    var secondSet = otherSet;
+    var secondSet = otherSet.values();
 
     firstSet.forEach(function (e) {
       unionSet.add(e);
@@ -60,10 +60,22 @@ function mySet() {
     collection = unionSet;
     return unionSet;
   };
+
+  this.intersection = function (otherSet) {
+    var intersectionSet = new mySet();
+    var firstSet = this.values();
+
+    firstSet.forEach(function (e) {
+      if (otherSet.has(e)) {
+        intersectionSet.add(e);
+      }
+    });
+    return intersectionSet;
+  };
 }
 
 var obj = new mySet();
-console.log(obj.union([6, 7, 8, 9]));
+// console.log(obj.union([6, 7, 8, 9]));
 
 // console.log(obj.remove(4));
 // console.log(obj.remove(1));
