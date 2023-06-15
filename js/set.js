@@ -61,6 +61,7 @@ function mySet() {
     return unionSet;
   };
 
+  // this method will return the intersection of  two sets as a new set
   this.intersection = function (otherSet) {
     var intersectionSet = new mySet();
     var firstSet = this.values();
@@ -73,6 +74,7 @@ function mySet() {
     return intersectionSet;
   };
 
+  //this method will return the difference of two sets as a new set
   this.difference = function (otherSet) {
     var differenceSet = new mySet();
     var firstSet = this.values();
@@ -82,6 +84,14 @@ function mySet() {
       }
     });
     return differenceSet;
+  };
+
+  // this method will test if the set is a subset of a different set
+  this.subset = function (otherSet) {
+    var firstSet = this.values();
+    return firstSet.every(function (value) {
+      return otherSet.has(value);
+    });
   };
 }
 
