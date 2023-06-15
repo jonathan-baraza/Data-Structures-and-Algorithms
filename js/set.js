@@ -48,7 +48,7 @@ function mySet() {
   this.union = function (otherSet) {
     var unionSet = new Set();
     var firstSet = this.values();
-    var secondSet = otherSet.values();
+    var secondSet = otherSet;
 
     firstSet.forEach(function (e) {
       unionSet.add(e);
@@ -63,7 +63,8 @@ function mySet() {
 }
 
 var obj = new mySet();
-// console.log(obj.remove(3));
+console.log(obj.union([6, 7, 8, 9]));
+
 // console.log(obj.remove(4));
 // console.log(obj.remove(1));
-// console.log(obj.values());
+console.log(obj.values());
