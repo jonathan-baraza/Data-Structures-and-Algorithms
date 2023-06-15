@@ -40,10 +40,30 @@ function mySet() {
     //remove with splice
     // collection.splice(idx,1)
   };
+
+  this.size = function () {
+    return collection.length;
+  };
+
+  this.union = function (otherSet) {
+    var unionSet = new Set();
+    var firstSet = this.values();
+    var secondSet = otherSet.values();
+
+    firstSet.forEach(function (e) {
+      unionSet.add(e);
+    });
+    secondSet.forEach(function (e) {
+      unionSet.add(e);
+    });
+
+    collection = unionSet;
+    return true;
+  };
 }
 
 var obj = new mySet();
-console.log(obj.remove(3));
-console.log(obj.remove(4));
-console.log(obj.remove(1));
-console.log(obj.values());
+// console.log(obj.remove(3));
+// console.log(obj.remove(4));
+// console.log(obj.remove(1));
+// console.log(obj.values());
