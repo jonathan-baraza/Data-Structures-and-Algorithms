@@ -58,7 +58,7 @@ function mySet() {
     });
 
     collection = unionSet;
-    return true;
+    return unionSet;
   };
 }
 
@@ -67,4 +67,4 @@ console.log(obj.union([6, 7, 8, 9]));
 
 // console.log(obj.remove(4));
 // console.log(obj.remove(1));
-console.log(obj.values());
+// console.log(obj.values());
