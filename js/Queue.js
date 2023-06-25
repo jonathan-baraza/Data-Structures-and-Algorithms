@@ -8,9 +8,9 @@ function Queue() {
     collection.push(element);
   };
 
-  //   const dequeue = () => {
-  //     return collection.shift();
-  //   };
+  const dequeue = () => {
+    return collection.shift();
+  };
   //   const front = () => {
   //     return collection[0];
   //   };
