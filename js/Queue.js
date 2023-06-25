@@ -15,9 +15,9 @@ function Queue() {
     return collection[0];
   };
 
-  //   const size = () => {
-  //     return collection.length;
-  //   };
+  const size = () => {
+    return collection.length;
+  };
 
   //   const isEmpty = () => {
   //     return collection.length === 0;
