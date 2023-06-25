@@ -23,3 +23,7 @@ function Queue() {
     return collection.length === 0;
   };
 }
+
+const myQueue = new Queue();
+myQueue.enqueue(5);
+myQueue.print();
