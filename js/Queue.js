@@ -26,4 +26,6 @@ function Queue() {
 
 const myQueue = new Queue();
 myQueue.enqueue(5);
+// myQueue.dequeue();
 myQueue.print();
+console.log(myQueue.front());
