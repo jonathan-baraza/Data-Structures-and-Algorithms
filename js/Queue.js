@@ -1,25 +1,25 @@
 function Queue() {
-  var collection = [];
-  const print = () => {
+  var collection = [1, 2, 3, 4];
+  this.print = () => {
     console.log(collection);
   };
 
-  const enqueue = (element) => {
+  this.enqueue = (element) => {
     collection.push(element);
   };
 
-  const dequeue = () => {
+  this.dequeue = () => {
     return collection.shift();
   };
-  const front = () => {
+  this.front = () => {
     return collection[0];
   };
 
-  const size = () => {
+  this.size = () => {
     return collection.length;
   };
 
-  const isEmpty = () => {
+  this.isEmpty = () => {
     return collection.length === 0;
   };
 }
