@@ -19,7 +19,7 @@ function Queue() {
     return collection.length;
   };
 
-  //   const isEmpty = () => {
-  //     return collection.length === 0;
-  //   };
+  const isEmpty = () => {
+    return collection.length === 0;
+  };
 }
