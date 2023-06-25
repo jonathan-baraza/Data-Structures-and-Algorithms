@@ -11,9 +11,9 @@ function Queue() {
   const dequeue = () => {
     return collection.shift();
   };
-  //   const front = () => {
-  //     return collection[0];
-  //   };
+  const front = () => {
+    return collection[0];
+  };
 
   //   const size = () => {
   //     return collection.length;
