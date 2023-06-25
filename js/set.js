@@ -96,7 +96,15 @@ function mySet() {
 }
 
 var obj = new mySet();
-// console.log(obj.union([6, 7, 8, 9]));
+obj.add(6);
+obj.add(7);
+obj.add(8);
+var newSet = new mySet();
+newSet.add(11), newSet.add(12), newSet.add(5);
+
+console.log(newSet.difference(obj).values());
+
+// console.log(obj.union([6, 7, 8, 9]));d
 
 // console.log(obj.remove(4));
 // console.log(obj.remove(1));
