@@ -50,6 +50,7 @@ class BST {
     return current.data;
   }
 
+  //fn to find max
   findMax() {
     let current = this.root;
     while (current.right !== null) {
