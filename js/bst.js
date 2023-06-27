@@ -12,6 +12,7 @@ class BST {
     this.root = null;
   }
 
+  //fn to add data to the binary search tree
   add(data) {
     const node = this.root;
     if (node === null) {
