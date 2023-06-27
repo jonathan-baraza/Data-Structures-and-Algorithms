@@ -26,7 +26,7 @@ class BST {
             return searchTree(node.left);
           }
         } else if (data > node.data) {
-          if (node.right == null) {
+          if (node.right === null) {
             node.right = new Node(data);
             return;
           } else if (node.right !== null) {
