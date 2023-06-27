@@ -109,7 +109,7 @@ class BST {
         if (node.right == null) {
           return node.left;
         }
-        //node has two children
+        //if node has two children
         var tempNode = node.right;
         while (tempNode.left !== null) {
           tempNode = tempNode.left;
