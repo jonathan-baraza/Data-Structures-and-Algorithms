@@ -39,4 +39,12 @@ class BST {
       return searchTree(node);
     }
   }
+
+  findMin() {
+    let current = this.root;
+    while (current.left !== null) {
+      current = current.left;
+    }
+    return current.data;
+  }
 }
