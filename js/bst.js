@@ -76,4 +76,17 @@ class BST {
   }
 
   //   check if data is present
+  isPresent(data) {
+    let current = this.root;
+    if (data === current.data) {
+      return true;
+    }
+    if (data < current.data) {
+      current = current.left;
+    } else {
+      current = current.right;
+    }
+
+    return false
+  }
 }
