@@ -41,6 +41,7 @@ class BST {
     }
   }
 
+  //fn to find min
   findMin() {
     let current = this.root;
     while (current.left !== null) {
