@@ -74,4 +74,6 @@ class BST {
     }
     return null;
   }
+
+  //   check if data is present
 }
